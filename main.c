@@ -29,12 +29,20 @@ int main(){
 
 //파일 1의 정보를 가져오는 함수 작성
 void filestat1(){
-    
+    if (stat("./test1", &stat1) < 0) 
+    {
+        printf("text1 doesn't exist\n");
+        _exit(0);
+    }   
 }
 
 //파일 2의 정보를 가져오는 함수 작성
 void filestat2(){
-    
+    if (stat("./test2", &stat2) < 0) 
+    {
+        printf("text2 doesn't exist\n");
+        _exit(0);
+    }
 }
 
 //파일 1의 시간 정보를 가져오는 함수 작성
